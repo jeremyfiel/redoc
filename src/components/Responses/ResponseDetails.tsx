@@ -10,16 +10,18 @@ import { Schema } from '../Schema';
 import { Extensions } from '../Fields/Extensions';
 import { Markdown } from '../Markdown/Markdown';
 import { ResponseHeaders } from './ResponseHeaders';
+import { ResponseLinks } from './ResponseLinks';
 import { ConstraintsView } from '../Fields/FieldConstraints';
 
 export class ResponseDetails extends React.PureComponent<{ response: ResponseModel }> {
   render() {
-    const { description, extensions, headers, content } = this.props.response;
+    const { description, extensions, headers, links, content } = this.props.response;
     return (
       <>
         {description && <Markdown source={description} />}
         <Extensions extensions={extensions} />
         <ResponseHeaders headers={headers} />
+        {links && links.length > 0 && <ResponseLinks links={links} />}
         <MediaTypesSwitch content={content} renderDropdown={this.renderDropdown}>
           {({ schema }) => {
             return (
