@@ -1,0 +1,7 @@
+// Jest Snapshot v1, TODO: remove this comment and replace with your own code
+
+exports[`LinkModel Test Case 1`] = `{"description":"Test Link Model 1","isReachable":true,"method":"GET","name":"Test Link 1","operationId":"op1","parameters":[{"key":"param1","value":"value1"}],"parametersExpanded":[{"key":"param1","value":"value1 expanded"}],"path":"/test1","server":{"url":"http://test1.com"},"unreachableReason":null}`;
+
+exports[`LinkModel Test Case 2`] = `{"description":"Test Link Model 2","isReachable":false,"method":"POST","name":"Test Link 2","operationId":"op2","parameters":[{"key":"param2","value":"value2"}],"parametersExpanded":[{"key":"param2","value":"value2 expanded"}],"path":"/test2","server":{"url":"http://test2.com"},"unreachableReason":"Network error"}`;
+
+exports[`LinkModel Test Case 3`] = `{"description":"Test Link Model 3","isReachable":true,"method":"PUT","name":"Test Link 3","operationId":"op3","parameters":[{"key":"param3","value":"value3"}],"parametersExpanded":[{"key":"param3","value":"value3 expanded"}],"path":"/test3","server":{"url":"http://test3.com"},"unreachableReason":null}`;
