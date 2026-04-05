@@ -1,54 +1,41 @@
-import { UnderlinedHeader } from '../../common-elements';
-import styled from '../../styled-components';
-import { ResponseTitle } from './ResponseTitle';
+// styled.elements.ts
 
-export const StyledResponseTitle = styled(ResponseTitle)`
-  display: block;
-  border: 0;
-  width: 100%;
-  text-align: left;
-  padding: 10px;
-  border-radius: 2px;
-  margin-bottom: 4px;
-  line-height: 1.5em;
-  cursor: pointer;
+import styled from 'styled-components';
 
-  color: ${props => props.theme.colors.responses[props.type].color};
-  background-color: ${props => props.theme.colors.responses[props.type].backgroundColor};
-  &:focus {
-    outline: auto ${props => props.theme.colors.responses[props.type].color};
-  }
-  ${props =>
-    (props.empty &&
-      `
-cursor: default;
-&::before {
-  content: "—";
+export const LinksCaption = styled.h2`
+  color: #333;
+  font-size: 1.5em;
+`;
+
+export const LinkItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+`;
+
+export const LinkTitle = styled.h3`
+  color: #007BFF;
+  font-size: 1.25em;
+`;
+
+export const LinkDescription = styled.p`
+  color: #666;
+`;
+
+export const LinkOperationInfo = styled.span`
   font-weight: bold;
-  width: 1.5em;
-  text-align: center;
-  display: inline-block;
-  vertical-align: top;
-}
-&:focus {
-  outline: 0;
-}
-`) ||
-    ''};
 `;
 
-export const ResponseDetailsWrap = styled.div`
-  padding: 10px;
+export const LinkParameters = styled.ul`
+  list-style: none;
+  padding: 0;
 `;
 
-export const HeadersCaption = styled(UnderlinedHeader).attrs({
-  as: 'caption',
-})`
-  text-align: left;
-  margin-top: 1em;
-  caption-side: top;
+export const LinkParameterItem = styled.li`
+  margin: 5px 0;
 `;
 
-export const Code = styled.strong`
-  vertical-align: top;
+export const LinkUnreachable = styled.span`
+  color: red;
+  font-style: italic;
 `;
